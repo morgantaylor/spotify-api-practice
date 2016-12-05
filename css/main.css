@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #333;
+  font-size: 10px;
+}
+.pageWrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  text-align: center;
+  height: auto;
+  padding: 30px 0;
+}
+.gallery-holder {
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 960px;
+  width: 100%;
+}
+#list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  margin: 15px;
+  max-width: 200px;
+  height: auto;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  transition-property: margin, background-color, border-color;
+  transition-duration: .4s, .2s, .2s;
+  transition-timing-function: ease-in-out, ease, ease;
+  -webkit-box-shadow: 5px 4px 10px 0px rgba(115, 115, 115, 0.20);
+  -moz-box-shadow: 5px 4px 10px 0px rgba(115, 115, 115, 0.20);
+  box-shadow: 5px 4px 10px 0px rgba(115, 115, 115, 0.20);
+}
+.card:hover {
+  background-color: #e0e0e0;
+  border-color: #ff0000;
+}
+.card a {
+  text-decoration: none;
+  color: #000;
+  text-transform: none;
+}
+.card p {
+  font-size: 1.3em;
+  font-weight: 100;
+  padding: 10px 0;
+}
+.thumb {
+  max-width: 100%;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+  border-color: transparent !important;
+}
+.hidden {
+  display: none;
+}
+#overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.prev, .next {
+  flex: 1 12%;
+  display: block;
+  height: 64px;
+  background-size: 32px;
+}
+.fa {
+  cursor: pointer;
+  color: white;
+}
+#left-arrow-svg, #right-arrow-svg {
+  fill: white;
+  width: 30px;
+  height: 30px;
+}
+.hide {
+  margin-left: 0;
+  margin-right: 0;
+}
+.overlay-content {
+  width: 75%;
+  max-width: 900px;
+  flex: 0 75%;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  text-align: left;
+  padding: 8em 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  border-radius: 5px;
+}
+.overlay-content img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  flex: 1 0 45%;
+  padding: 15px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.overlay-content .album-info {
+  flex: 1 45%;
+  margin: auto auto auto 40px;
+}
+.overlay-content .album-info .album-info-artist, .overlay-content .album-info .album-info-name, .overlay-content .album-info .album-info-track-number, .overlay-content .album-info .album-info-popularity, .overlay-content .album-info .album-linktofile {
+  display: block;
+  font-weight: 100;
+  font-size: 2em;
+  line-height: 1.5;
+  margin: 0;
+}
+.overlay-content .album-info .album-info-artist {
+  font-size: 2.7em;
+  font-weight: 500;
+}
+.overlay-content .album-info .album-info-track-number, .overlay-content .album-info .album-info-popularity {
+  font-size: 1.5em;
+}
+.overlay-content .album-info .album-linktofile {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background: #00af00;
+  max-width: 150px;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+.overlay-content .album-info .album-linktofile a {
+  color: #fff;
+  text-decoration: none;
+}
